@@ -27,7 +27,10 @@ export function Form() {
             value={blueskyHandle}
           />
         </div>
-        <button className="rounded-br rounded-tr bg-blue-600 p-3 text-white">
+        <button
+          className="rounded-br rounded-tr bg-blue-600 p-3 text-white"
+          aria-label="Analise"
+        >
           <MoveRight />
         </button>
       </div>
