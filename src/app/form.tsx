@@ -10,7 +10,12 @@ export function Form() {
 
   const handleForm = (event: FormEvent) => {
     event.preventDefault();
-    router.push(`/${blueskyHandle}`);
+
+    if (!blueskyHandle.includes('.')) {
+      return router.push(`/${blueskyHandle}.bsky.social`);
+    }
+
+    return router.push(`/${blueskyHandle}`);
   };
 
   return (
@@ -22,7 +27,7 @@ export function Form() {
           <input
             type="text"
             className="bg-zinc-200 outline-none"
-            placeholder="meunick.bsky.app"
+            placeholder="meunick.bsky.social"
             onChange={(event) => setBlueskyHandle(event.target.value)}
             value={blueskyHandle}
           />
