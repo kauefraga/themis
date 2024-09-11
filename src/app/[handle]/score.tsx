@@ -1,6 +1,7 @@
 'use client';
 
 import { ProfileViewDetailed } from '@atproto/api/dist/client/types/app/bsky/actor/defs';
+import { generateFeedback } from './feedback';
 
 function calculateProfileScore(profile: ProfileViewDetailed) {
   let score = 0;
@@ -8,7 +9,6 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
   if (profile.displayName) {
     // has display name
     score += 5;
-
     if (profile.displayName.length <= 10) {
       // short display name buff
       score *= 2;
@@ -35,7 +35,6 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
   if (profile.description) {
     // has description
     score += 5;
-
     if (profile.description.length >= 20 && profile.description.length <= 50) {
       // RELATIVE: informative description buff
       score *= 2;
@@ -45,10 +44,11 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
   if (profile.followersCount && profile.followsCount) {
     // follow ratio buff
     const ratio = profile.followersCount / profile.followsCount;
+
     score *= ratio > 1 ? ratio : 1;
   }
 
-  return Math.ceil(score);
+  return { score: Math.ceil(score), feedback: generateFeedback(profile) };
 }
 
 interface ScoreProps {
@@ -56,7 +56,16 @@ interface ScoreProps {
 }
 
 export function Score({ profile }: ScoreProps) {
-  const profileScore = calculateProfileScore(profile);
+  const { score, feedback } = calculateProfileScore(profile);
 
-  return <p className="text-xl text-blue-600">Pontuação: {profileScore}</p>;
+  return (
+    <div>
+      <p className="text-xl text-blue-600">Pontuação: {score}</p>
+      <ul className="text-sm text-gray-600">
+        {feedback.map((tip, index) => (
+          <li key={index}>{tip}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
