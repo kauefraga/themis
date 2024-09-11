@@ -44,7 +44,8 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
   if (profile.followersCount && profile.followsCount) {
     // follow ratio buff
     const ratio = profile.followersCount / profile.followsCount;
-    score *= ratio;
+
+    score *= ratio > 1 ? ratio : 1;
   }
 
   return { score: Math.ceil(score), feedback: generateFeedback(profile) };
