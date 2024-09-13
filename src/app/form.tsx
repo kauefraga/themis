@@ -30,6 +30,7 @@ export function Form() {
             placeholder="meunick.bsky.social"
             onChange={(event) => setBlueskyHandle(event.target.value)}
             value={blueskyHandle}
+            autoCapitalize="none"
           />
         </div>
         <button
