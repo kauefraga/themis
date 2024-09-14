@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { agent } from '@/providers/bluesky';
 import { Footer } from '@/components/footer';
+import { agent } from '@/providers/bluesky';
+import Image from 'next/image';
 import { Score } from './score';
 
 type StaticParams = {
