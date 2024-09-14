@@ -36,6 +36,18 @@ Na **página de análise** (server component, server-side rendered), os dados do
 
 ### Como executar o ambiente de desenvolvimento
 
+Primeiro, instale as dependências do projeto (requer o [Bun](https://bun.sh/))
+
+```sh
+bun install --frozen-lockfile
+```
+
+Execute o servidor de desenvolvimento do Next.js
+
+```sh
+bun dev # ou bun run dev
+```
+
 ### Tecnologias
 
 - deploy cloudflare
@@ -48,9 +60,24 @@ Na **página de análise** (server component, server-side rendered), os dados do
 
 ## Contribuições
 
+Fica a vontade para contribuir [abrindo uma issue](https://github.com/kauefraga/themis/issues/new) para reportar um bug, sugerir uma alteração na interface, uma melhoria ou uma nova funcionalidade.
+
 ### Como contribuir
 
-### Contribuidores
+1. Faça um *fork* do projeto
+2. Clone seu *fork* na sua máquina
+3. Prepare o [ambiente de desenvolvimento](#como-executar-o-ambiente-de-desenvolvimento)
+4. Faça as alterações e *commit* elas com [mensagens descritivas](https://www.conventionalcommits.org/pt-br/v1.0.0/)
+5. Sincronize as alterações com o repositório do seu *fork* (`git push`)
+6. Abra um *pull request* especificando o que você fez de forma geral (considerando que as alterações têm seus *commits* descritivos)
+
+### Contribuidores e apoiadores
+
+Meus agradecimentos a essas pessoas incríveis por ajudarem a aprimorar o projeto ou por incentivarem a continuação do projeto por meio de doações:
+
+[![perfil de gxolivei](https://github.com/gxolivei.png?size=60)](https://github.com/gxolivei)
+[![perfil de rdenadai](https://github.com/rdenadai.png?size=60)](https://github.com/rdenadai)
+[![perfil de andressansantos](https://github.com/andressansantos.png?size=60)](https://github.com/andressansantos)
 
 ## Licença
 
@@ -58,4 +85,4 @@ Este projeto está sob a licença MIT - Veja a [LICENÇA](LICENSE) para mais inf
 
 ---
 
-Se você gostou do projeto, considere dar uma estrela no repositório ⭐, fazer uma doação para eu tomar um cafézinho ☕ ou publicar a análise do seu perfil no Bluesky 💙
+Se você gostou do projeto, considere dar uma estrela no repositório ⭐, fazer [uma doação para eu tomar um cafézinho](https://www.pixme.bio/kauefraga) ☕ ou publicar a análise do seu perfil no [Bluesky](https://bsky.app/) 💙
