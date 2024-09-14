@@ -12,6 +12,16 @@ O objetivo do Themis é ser divertido e mostrar que existem alguns pontos que to
 
 Esse projeto é inspirado no [auralized.com](https://www.auralized.com/), um analisador de "aura" para perfis do Twitter/X. A ideia original era que fosse uma versão brasileira do projeto *auralized* para o Bluesky.
 
+![Demonstração do uso do Themis](docs/demo.mp4)
+
+## Como usar
+
+1. Entre no site [themis.kauefraga.dev](https://themis.kauefraga.dev)
+2. Insira o @ do perfil (exemplo: meuarroba.bsky.social)
+3. Clique na seta ou pressione a tecla <kbd>enter</kbd>
+
+Depois disso você deve ser redirecionado para página de análise do perfil e pronto! Bem simples, né?
+
 ## Mais detalhes do projeto
 
 O usuário insere o @ de um perfil (`handle`) e é redirecionado para a página de análise do mesmo, onde os dados do perfil inserido são processados e uma avaliação é gerada.
