@@ -6,13 +6,17 @@
 
 > Um analisador de perfis do Bluesky, focado em usabilidade. Quer melhorar o seu perfil do Bluesky? O Themis vai te ajudar!
 
+<div align="center">
+
+![Demonstração do uso do Themis](docs/demo.gif)
+
+</div>
+
 O usuário insere o @ de um perfil e é redirecionado para a página de análise do mesmo, onde os dados do perfil inserido são processados e uma avaliação é gerada.
 
 O objetivo do Themis é ser divertido e mostrar que existem alguns pontos que tornam um perfil mais atrativo no Bluesky.
 
 Esse projeto é inspirado no [auralized.com](https://www.auralized.com/), um analisador de "aura" para perfis do Twitter/X. A ideia original era que fosse uma versão brasileira do projeto *auralized* para o Bluesky.
-
-![Demonstração do uso do Themis](docs/demo.mp4)
 
 ## Como usar
 
@@ -29,3 +33,29 @@ O usuário insere o @ de um perfil (`handle`) e é redirecionado para a página 
 A **página inicial** é onde o usuário insere o `handle` do perfil por meio do formulário e é redirecionado para a página de análise.
 
 Na **página de análise** (server component, server-side rendered), os dados do perfil são consultados utilizando a [API do Bluesky](https://docs.bsky.app/) (especificamente, o lexicon [`app.bsky.actor.getProfile`](https://docs.bsky.app/docs/api/app-bsky-actor-get-profile)) pelo [SDK](https://www.npmjs.com/package/@atproto/api) e consumidos na geração da avaliação do perfil, o feedback é gerado nessa etapa também.
+
+### Como executar o ambiente de desenvolvimento
+
+### Tecnologias
+
+- deploy cloudflare
+- bun
+- nextjs
+- tailwindcss
+- @atproto/api
+- typescript
+- lucide-react
+
+## Contribuições
+
+### Como contribuir
+
+### Contribuidores
+
+## Licença
+
+Este projeto está sob a licença MIT - Veja a [LICENÇA](LICENSE) para mais informações.
+
+---
+
+Se você gostou do projeto, considere dar uma estrela no repositório ⭐, fazer uma doação para eu tomar um cafézinho ☕ ou publicar a análise do seu perfil no Bluesky 💙
