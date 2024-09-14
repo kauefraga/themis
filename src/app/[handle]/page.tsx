@@ -1,5 +1,5 @@
 import { Footer } from '@/components/footer';
-import { agent } from '@/providers/bluesky';
+import { getProfile } from '@/providers/bluesky';
 import Image from 'next/image';
 import { Score } from './score';
 
@@ -10,9 +10,30 @@ type StaticParams = {
 };
 
 export default async function ProfileAnalysis({ params }: StaticParams) {
-  const { data } = await agent.getProfile({
-    actor: params.handle,
-  });
+  const data = await getProfile(params.handle);
+
+  if (typeof data === 'string') {
+    const message =
+      data === 'Profile not found' ? `O perfil não foi encontrado` : data;
+
+    return (
+      <main className="p-4 rounded-md flex flex-col gap-5  mt-20 mx-auto bg-zinc-200 border border-black/90 max-w-xl w-full">
+        <div className="space-y-1">
+          <h1 className="text-xl font-medium">Ocorreu um erro!</h1>
+          <p>
+            {message} ({params.handle})
+          </p>
+        </div>
+
+        <a
+          href="/"
+          className="bg-zinc-300 w-fit px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Voltar
+        </a>
+      </main>
+    );
+  }
 
   return (
     <div className="grid min-h-[100dvh] grid-rows-[1fr_auto] justify-items-center">
