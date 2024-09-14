@@ -14,24 +14,31 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
 
   if (typeof data === 'string') {
     const message =
-      data === 'Profile not found' ? `O perfil não foi encontrado` : data;
+      data === 'Profile not found' ? (
+        <p>
+          O perfil @{params.handle} não foi encontrado. Talvez você tenha
+          digitado errado, volte e tente novamente.
+        </p>
+      ) : (
+        <p>{data}</p>
+      );
 
     return (
-      <main className="p-4 rounded-md flex flex-col gap-5  mt-20 mx-auto bg-zinc-200 border border-black/90 max-w-xl w-full">
-        <div className="space-y-1">
-          <h1 className="text-xl font-medium">Ocorreu um erro!</h1>
-          <p>
-            {message} ({params.handle})
-          </p>
-        </div>
+      <div className="p-4">
+        <main className="p-4 rounded-md flex flex-col gap-5 mt-20 mx-auto bg-zinc-200 border border-black/90 max-w-xl w-full">
+          <div className="space-y-1">
+            <h1 className="text-xl font-medium">Ocorreu um erro!</h1>
+            {message}
+          </div>
 
-        <a
-          href="/"
-          className="bg-zinc-300 w-fit px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Voltar
-        </a>
-      </main>
+          <a
+            href="/"
+            className="bg-zinc-300 w-fit px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Voltar
+          </a>
+        </main>
+      </div>
     );
   }
 
