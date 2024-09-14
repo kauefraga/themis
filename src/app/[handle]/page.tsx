@@ -2,6 +2,8 @@ import { Footer } from '@/components/footer';
 import { agent } from '@/providers/bluesky';
 import Image from 'next/image';
 import { Score } from './score';
+import { Input } from './input';
+import Link from 'next/link';
 
 type StaticParams = {
   params: {
@@ -46,6 +48,8 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
             <Score profile={data} />
           </div>
         </main>
+        <Input />
+        <Link href={'/'} className='underline mt-16 opacity-80 text-center'>Voltar para o início</Link>
       </div>
 
       <Footer />
