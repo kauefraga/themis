@@ -42,7 +42,7 @@ Primeiro, instale as dependências do projeto (requer o [Bun](https://bun.sh/))
 bun install --frozen-lockfile
 ```
 
-Execute o servidor de desenvolvimento do Next.js
+Execute o servidor de desenvolvimento do [Next.js](https://nextjs.org/docs)
 
 ```sh
 bun dev # ou bun run dev
@@ -60,7 +60,7 @@ bun dev # ou bun run dev
 
 ## Contribuições
 
-Fica a vontade para contribuir [abrindo uma issue](https://github.com/kauefraga/themis/issues/new) para reportar um bug, sugerir uma alteração na interface, uma melhoria ou uma nova funcionalidade.
+Fique à vontade para contribuir [abrindo uma issue](https://github.com/kauefraga/themis/issues/new) para reportar um bug, sugerir uma alteração na interface, uma melhoria ou uma nova funcionalidade.
 
 ### Como contribuir
 
