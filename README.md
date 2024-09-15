@@ -79,7 +79,8 @@ Meus agradecimentos a essas pessoas incríveis por ajudarem a aprimorar o projet
 [![perfil de rdenadai](https://github.com/rdenadai.png?size=60)](https://github.com/rdenadai)
 [![perfil de andressansantos](https://github.com/andressansantos.png?size=60)](https://github.com/andressansantos)
 [![perfil de jeffque](https://github.com/jeffque.png?size=60)](https://github.com/jeffque)
-[![perfil de CaioHVectorA](https://github.com/CaioHVectorA.png?size=60)](https://github.com/CaioHVectorA)
+[![perfil de caiohvectora](https://github.com/CaioHVectorA.png?size=60)](https://github.com/CaioHVectorA)
+[![perfil de ibryans](https://github.com/ibryans.png?size=60)](https://github.com/ibryans)
 
 ## Licença
 
