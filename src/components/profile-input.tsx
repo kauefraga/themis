@@ -30,10 +30,11 @@ export function ProfileInput() {
             onChange={(event) => setBlueskyHandle(event.target.value)}
             value={blueskyHandle}
             autoCapitalize="none"
+            required
           />
         </div>
         <button
-          className="rounded-br rounded-tr bg-blue-600 p-3 text-white"
+          className="rounded-br rounded-tr bg-blue-600 p-3 text-white hover:bg-blue-700 transition-colors"
           aria-label="Analise"
         >
           <MoveRight />
