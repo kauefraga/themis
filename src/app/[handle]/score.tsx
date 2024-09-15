@@ -1,8 +1,8 @@
 'use client';
 
+import ShareButton from '@/components/share-button';
 import { ProfileViewDetailed } from '@atproto/api/dist/client/types/app/bsky/actor/defs';
 import { generateFeedback } from './feedback';
-import ShareButton from '@/components/share-button';
 
 function calculateProfileScore(profile: ProfileViewDetailed) {
   let score = 0;
@@ -69,7 +69,7 @@ export function Score({ profile }: ScoreProps) {
           ))}
         </ul>
       </div>
-      <ShareButton score={score}/>
+      <ShareButton score={score} />
     </>
   );
 }
