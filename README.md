@@ -50,13 +50,13 @@ bun dev # ou bun run dev
 
 ### Tecnologias
 
-- deploy cloudflare
-- bun
-- nextjs
-- tailwindcss
-- @atproto/api
-- typescript
-- lucide-react
+- [Bun](https://bun.sh/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ATProto API](https://www.npmjs.com/package/@atproto/api)
+- [Lucide](https://lucide.dev/) / [lucide-react](https://lucide.dev/guide/packages/lucide-react)
+- [Cloudflare Pages](https://pages.cloudflare.com/) / [Next.js SSR deploy](https://developers.cloudflare.com/pages/framework-guides/nextjs/ssr/get-started/)
 
 ## Contribuições
 
