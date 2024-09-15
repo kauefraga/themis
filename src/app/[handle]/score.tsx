@@ -2,6 +2,7 @@
 
 import { ProfileViewDetailed } from '@atproto/api/dist/client/types/app/bsky/actor/defs';
 import { generateFeedback } from './feedback';
+import ShareButton from '@/components/share-button';
 
 function calculateProfileScore(profile: ProfileViewDetailed) {
   let score = 0;
@@ -59,13 +60,16 @@ export function Score({ profile }: ScoreProps) {
   const { score, feedback } = calculateProfileScore(profile);
 
   return (
-    <div>
-      <p className="text-xl text-blue-600">Pontuação: {score}</p>
-      <ul className="text-sm text-gray-600">
-        {feedback.map((tip, index) => (
-          <li key={index}>{tip}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div>
+        <p className="text-xl text-blue-600">Pontuação: {score}</p>
+        <ul className="text-sm text-gray-600">
+          {feedback.map((tip, index) => (
+            <li key={index}>{tip}</li>
+          ))}
+        </ul>
+      </div>
+      <ShareButton score={score}/>
+    </>
   );
 }
