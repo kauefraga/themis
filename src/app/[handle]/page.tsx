@@ -1,9 +1,9 @@
 import { Footer } from '@/components/footer';
+import { ProfileInput } from '@/components/profile-input';
 import { agent } from '@/providers/bluesky';
 import Image from 'next/image';
-import { Score } from './score';
-import { Input } from './input';
 import Link from 'next/link';
+import { Score } from './score';
 
 type StaticParams = {
   params: {
@@ -48,8 +48,14 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
             <Score profile={data} />
           </div>
         </main>
-        <Input />
-        <Link href={'/'} className='underline mt-16 opacity-80 text-center'>Voltar para o início</Link>
+
+        <div className="space-y-1 mt-5">
+          <h3>Quer analisar outro perfil?</h3>
+          <ProfileInput />
+        </div>
+        <Link href="/" className="underline mt-16 opacity-80 text-center">
+          Voltar para o início
+        </Link>
       </div>
 
       <Footer />
