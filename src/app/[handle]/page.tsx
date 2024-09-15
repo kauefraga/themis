@@ -1,6 +1,8 @@
 import { Footer } from '@/components/footer';
+import { ProfileInput } from '@/components/profile-input';
 import { getProfile } from '@/providers/bluesky';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Score } from './score';
 
 type StaticParams = {
@@ -44,8 +46,12 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
 
   return (
     <div className="grid min-h-[100dvh] grid-rows-[1fr_auto] justify-items-center">
-      <div className="p-4">
-        <main className="mt-20 flex h-fit w-full max-w-xl flex-col rounded-md border border-black/90 bg-zinc-200">
+      <div className="p-4 mt-20">
+        <Link href="/" className="underline">
+          Voltar
+        </Link>
+
+        <main className="flex h-fit w-full max-w-xl flex-col rounded-md border border-black/90 bg-zinc-200">
           {data.banner && (
             <Image
               src={data.banner}
@@ -74,6 +80,11 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
             <Score profile={data} />
           </div>
         </main>
+
+        <div className="space-y-1 mt-5 flex flex-col items-center">
+          <h3>Quer analisar outro perfil?</h3>
+          <ProfileInput />
+        </div>
       </div>
 
       <Footer />

@@ -1,4 +1,4 @@
-import { Form } from '@/app/form';
+import { ProfileInput } from '@/components/profile-input';
 
 export default function Home() {
   return (
@@ -16,7 +16,10 @@ export default function Home() {
           </p>
         </div>
 
-        <Form />
+        <div className="space-y-1">
+          <p>Nome de usuário do Bluesky</p>
+          <ProfileInput />
+        </div>
       </main>
     </div>
   );
