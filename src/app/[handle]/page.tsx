@@ -18,8 +18,12 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
 
   return (
     <div className="grid min-h-[100dvh] grid-rows-[1fr_auto] justify-items-center">
-      <div className="p-4">
-        <main className="mt-20 flex h-fit w-full max-w-xl flex-col rounded-md border border-black/90 bg-zinc-200">
+      <div className="p-4 mt-20">
+        <Link href="/" className="underline">
+          Voltar
+        </Link>
+
+        <main className="flex h-fit w-full max-w-xl flex-col rounded-md border border-black/90 bg-zinc-200">
           {data.banner && (
             <Image
               src={data.banner}
@@ -49,13 +53,10 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
           </div>
         </main>
 
-        <div className="space-y-1 mt-5">
+        <div className="space-y-1 mt-5 flex flex-col items-center">
           <h3>Quer analisar outro perfil?</h3>
           <ProfileInput />
         </div>
-        <Link href="/" className="underline mt-16 opacity-80 text-center">
-          Voltar para o início
-        </Link>
       </div>
 
       <Footer />
