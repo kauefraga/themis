@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Themis',
-  description: 'Quer melhorar o seu perfil do Bluesky? Themis vai te ajudar!',
+  description:
+    'Um analisador de perfis do Bluesky, focado em usabilidade. Quer melhorar o seu perfil do Bluesky? O Themis vai te ajudar!',
 };
 
 export default function RootLayout({
