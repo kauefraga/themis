@@ -1,17 +1,26 @@
 import { Footer } from '@/components/footer';
 import { ProfileInput } from '@/components/profile-input';
 import { getProfile } from '@/providers/bluesky';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Score } from './score';
 
-type StaticParams = {
+type Props = {
   params: {
     handle: string;
   };
 };
 
-export default async function ProfileAnalysis({ params }: StaticParams) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { handle } = params;
+
+  return {
+    title: `${handle} | Themis`,
+  };
+}
+
+export default async function ProfileAnalysis({ params }: Props) {
   const data = await getProfile(params.handle);
 
   if (typeof data === 'string') {
