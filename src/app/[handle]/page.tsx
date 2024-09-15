@@ -62,7 +62,7 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
               className="w-full rounded-tl rounded-tr border-b border-black/90"
             />
           )}
-          <div className="flex -translate-y-1/4 flex-col gap-3 px-5 py-3">
+          <div className="flex flex-col -mt-16 gap-3 px-5 py-3">
             {data.avatar && (
               <Image
                 src={data.avatar}
