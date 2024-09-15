@@ -45,7 +45,7 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
   return (
     <div className="grid min-h-[100dvh] grid-rows-[1fr_auto] justify-items-center">
       <div className="p-4">
-        <main className="mt-20 flex h-fit w-full max-w-xl flex-col rounded-md border border-black/90 bg-zinc-200">
+        <main className="mt-20 flex h-fit w-full max-w-xl flex-col rounded-md border border-black/90 bg-zinc-200 ">
           {data.banner && (
             <Image
               src={data.banner}
@@ -73,9 +73,14 @@ export default async function ProfileAnalysis({ params }: StaticParams) {
             </p>
             <Score profile={data} />
           </div>
+          <a
+            href="/"
+            className="bg-zinc-300  px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors mx-12 my-3 flex justify-center align-middle"
+          >
+            Verifique se há outro usuário
+          </a>
         </main>
       </div>
-
       <Footer />
     </div>
   );
