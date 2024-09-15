@@ -17,7 +17,7 @@ export default function ShareButton({ score }: ShareProps) {
     return (
         <div className='self-start my-5'>
           <Link 
-            href={`${blueskyLink}?text=Meu perfil no Themis fez ${score} pontos! 🦋 ${link} `}
+            href={`${blueskyLink}?text=Meu perfil fez ${score} pontos no Themis! 🦋 ${link} `}
             target='_blank' 
             className="flex flex-row group space-x-2 w-fit items-center py-2 px-3 self-start border rounded bg-white hover:border-black/90 transition">
               <Image 
