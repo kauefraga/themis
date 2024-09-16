@@ -5,9 +5,11 @@ import { ProfileViewDetailed } from '@atproto/api/dist/client/types/app/bsky/act
 import { CircleGauge } from 'lucide-react';
 import { generateFeedback } from './feedback';
 
-const followersRatio = (followersCount: number, followsCount: number): number => (followersCount / (followersCount + followsCount));
+const followersRatio = (followersCount: number, followsCount: number): number =>
+  followersCount / (followersCount + followsCount);
 
-const exponentialScaling = (score: number, k: number = 0.01): number => 1 - Math.exp(-k * score);
+const exponentialScaling = (score: number, k: number = 0.01): number =>
+  1 - Math.exp(-k * score);
 
 function calculateProfileScore(profile: ProfileViewDetailed) {
   let score = 0;
@@ -49,7 +51,7 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
     // buff: has description
     descriptionBuff += 5;
 
-    if (profile.description.length >= 20 && profile.description.length <= 150) {
+    if (profile.description.length >= 20 && profile.description.length <= 200) {
       // buff: informative and concise description
       descriptionBuff *= 2;
     }
@@ -60,7 +62,8 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
   // From this point N = 50, for bigger N bigger percentages!
   if (profile.followersCount && profile.followsCount) {
     // follow ratio buff, could be almost * 2
-    score += score * followersRatio(profile.followersCount, profile.followsCount);
+    score +=
+      score * followersRatio(profile.followersCount, profile.followsCount);
   }
 
   score = Math.ceil(exponentialScaling(score) * 100); // Percentage 0 - 100
