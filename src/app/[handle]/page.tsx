@@ -2,7 +2,9 @@ import { Footer } from '@/components/footer';
 import { ProfileResult } from '@/components/profile-result';
 import { ResultOptions } from '@/components/result-options';
 import { getProfile } from '@/providers/bluesky';
+import { Undo2 } from 'lucide-react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 type Props = {
   params: {
@@ -34,18 +36,19 @@ export default async function ProfileAnalysis({ params }: Props) {
 
     return (
       <div className="p-4">
-        <main className="p-4 rounded-md flex flex-col gap-5 mt-20 mx-auto bg-zinc-200 border border-black/90 max-w-xl w-full">
+        <main className="p-4 rounded-md flex flex-col gap-5 mt-20 mx-auto max-w-xl w-full shadow-lg">
           <div className="space-y-1">
             <h1 className="text-xl font-medium">Ocorreu um erro!</h1>
             {message}
           </div>
 
-          <a
+          <Link
             href="/"
-            className="bg-zinc-300 w-fit px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-[#434343] w-fit px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
           >
-            Voltar
-          </a>
+            <Undo2 />
+            <p>Voltar</p>
+          </Link>
         </main>
       </div>
     );
