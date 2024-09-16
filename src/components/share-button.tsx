@@ -14,7 +14,7 @@ export default function ShareButton({ score }: ShareProps) {
   const link = 'https://themis.kauefraga.dev' + usePathname();
 
   return (
-    <div className="self-start my-5">
+    <div className="self-start">
       <Link
         href={`${blueskyLink}?text=Meu perfil fez ${score} pontos no Themis! 🦋 ${link} `}
         target="_blank"
@@ -26,7 +26,7 @@ export default function ShareButton({ score }: ShareProps) {
           alt="bluesky logo"
           className="border-r pr-2 border-gray-400"
         />
-        <p className="text-xs"> Compartilhe no Bluesky! </p>
+        <p className="text-sm text-[#434343]"> Compartilhe no Bluesky! </p>
       </Link>
     </div>
   );

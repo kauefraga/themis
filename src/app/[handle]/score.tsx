@@ -2,6 +2,7 @@
 
 import ShareButton from '@/components/share-button';
 import { ProfileViewDetailed } from '@atproto/api/dist/client/types/app/bsky/actor/defs';
+import { CircleGauge } from 'lucide-react';
 import { generateFeedback } from './feedback';
 
 function calculateProfileScore(profile: ProfileViewDetailed) {
@@ -61,14 +62,18 @@ export function Score({ profile }: ScoreProps) {
 
   return (
     <>
-      <div>
-        <p className="text-xl text-blue-600">Pontuação: {score}</p>
-        <ul className="text-sm text-gray-600">
-          {feedback.map((tip, index) => (
-            <li key={index}>{tip}</li>
-          ))}
-        </ul>
-      </div>
+      <h3 className="text-[#434343] text-lg md:text-xl flex items-center gap-1.5">
+        <CircleGauge className="w-5 h-5" /> Pontuação: +{score}
+      </h3>
+
+      <ul>
+        {feedback.map((tip, index) => (
+          <li key={index}>
+            <p className="text-base text-[#787878]">- {tip}</p>
+          </li>
+        ))}
+      </ul>
+
       <ShareButton score={score} />
     </>
   );

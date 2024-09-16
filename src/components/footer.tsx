@@ -1,6 +1,5 @@
-import Github from '@/assets/github.svg';
-import { Coffee } from 'lucide-react';
-import Image from 'next/image';
+import { AtSign, Coffee, Github } from 'lucide-react';
+
 import { AnchorHTMLAttributes } from 'react';
 
 interface ActionWrapperProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -11,7 +10,7 @@ function ActionWrapper({ href, children, ...props }: ActionWrapperProps) {
   return (
     <a
       href={href}
-      className="flex items-center gap-2 decoration-blue-600 underline-offset-2 hover:underline"
+      className="flex items-center gap-1.5 text-[#434343] text-sm"
       {...props}
     >
       {children}
@@ -21,31 +20,21 @@ function ActionWrapper({ href, children, ...props }: ActionWrapperProps) {
 
 export function Footer() {
   return (
-    <footer className="w-full border-t-2 border-blue-600">
-      <div className="flex items-center justify-center px-12 py-8 md:justify-between">
-        <div className="hidden space-x-10 md:flex">
-          <ActionWrapper href="https://github.com/kauefraga/themis">
-            <Image src={Github} alt="GitHub Icon" width={24} />
-            <p>Contribua no GitHub</p>
-          </ActionWrapper>
+    <footer className="w-full md:w-[600px] flex items-center justify-center gap-5 md:justify-between py-4 px-3 shadow-2xl rounded-t-2xl">
+      <ActionWrapper href="https://github.com/kauefraga/themis">
+        <Github className="w-5 h-5" />
+        <p className="hidden md:block">Contribua no GitHub</p>
+      </ActionWrapper>
 
-          <ActionWrapper href="https://www.pixme.bio/kauefraga">
-            <Coffee />
-            <p>Me apoia um pix pro cafézinho</p>
-          </ActionWrapper>
-        </div>
+      <ActionWrapper href="https://www.pixme.bio/kauefraga">
+        <Coffee className="w-5 h-5" />
+        <p className="hidden md:block">Me apoie um café</p>
+      </ActionWrapper>
 
-        <p>
-          Feito por{' '}
-          <a
-            href="https://bsky.app/profile/kauefraga.dev"
-            target="_blank"
-            className="underline decoration-blue-600 underline-offset-2"
-          >
-            Kauê Fraga Rodrigues
-          </a>
-        </p>
-      </div>
+      <ActionWrapper href="https://bsky.app/profile/kauefraga.dev">
+        <AtSign className="w-5 h-5" />
+        <p className="hidden md:block">Kauê Fraga Rodrigues</p>
+      </ActionWrapper>
     </footer>
   );
 }
