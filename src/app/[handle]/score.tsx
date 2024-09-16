@@ -8,38 +8,48 @@ function calculateProfileScore(profile: ProfileViewDetailed) {
   let score = 0;
 
   if (profile.displayName) {
-    // has display name
-    score += 5;
+    let displayNameScore = 0;
+
+    // buff: has display name
+    displayNameScore += 5;
+
     if (profile.displayName.length <= 10) {
-      // short display name buff
-      score *= 2;
+      // buff: short display name
+      displayNameScore *= 2;
     }
 
     // TODO: display name includes emoji/unicode buff
+
+    score += displayNameScore;
   }
 
   if (profile.banner) {
-    // has banner
+    // buff: has banner
     score += 5;
   }
 
   if (profile.avatar) {
-    // has avatar
+    // buff: has avatar
     score += 5;
   }
 
   if (/\d/g.test(profile.handle)) {
-    // handle includes number debuff
+    // debuff: handle includes number
     score -= 5;
   }
 
   if (profile.description) {
-    // has description
-    score += 5;
-    if (profile.description.length >= 20 && profile.description.length <= 50) {
-      // RELATIVE: informative description buff
-      score *= 2;
+    let descriptionBuff = 0;
+
+    // buff: has description
+    descriptionBuff += 5;
+
+    if (profile.description.length >= 20 && profile.description.length <= 150) {
+      // buff: informative and concise description
+      descriptionBuff *= 2;
     }
+
+    score += descriptionBuff;
   }
 
   if (profile.followersCount && profile.followsCount) {
