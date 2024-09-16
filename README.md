@@ -82,6 +82,7 @@ Meus agradecimentos a essas pessoas incríveis por ajudarem a aprimorar o projet
 [![perfil de caiohvectora](https://github.com/CaioHVectorA.png?size=60)](https://github.com/CaioHVectorA)
 [![perfil de ibryans](https://github.com/ibryans.png?size=60)](https://github.com/ibryans)
 [![perfil de notshwuy](https://github.com/notshwuy.png?size=60)](https://github.com/notshwuy)
+[![perfil de jotavetech](https://github.com/jotavetech.png?size=60)](https://github.com/jotavetech)
 
 ## Licença
 
