@@ -11,6 +11,7 @@ function ActionWrapper({ href, children, ...props }: ActionWrapperProps) {
     <a
       href={href}
       className="flex items-center gap-1.5 text-[#434343] text-sm"
+      target="_blank"
       {...props}
     >
       {children}
