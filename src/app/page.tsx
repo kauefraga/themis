@@ -11,7 +11,7 @@ export default function Home() {
             Themis
           </h1>
           <p>
-            Gere uma avaliação do seu perfil e descubra como deixa-lo mais
+            Gere uma avaliação do seu perfil e descubra como deixá-lo mais
             atrativo.
           </p>
         </div>

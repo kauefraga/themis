@@ -8,7 +8,7 @@
 
 <div align="center">
 
-![Demonstração do uso do Themis](docs/demo.gif)
+![Demonstração do uso do Themis](docs/demo-2.gif)
 
 </div>
 
@@ -81,6 +81,7 @@ Meus agradecimentos a essas pessoas incríveis por ajudarem a aprimorar o projet
 [![perfil de jeffque](https://github.com/jeffque.png?size=60)](https://github.com/jeffque)
 [![perfil de caiohvectora](https://github.com/CaioHVectorA.png?size=60)](https://github.com/CaioHVectorA)
 [![perfil de ibryans](https://github.com/ibryans.png?size=60)](https://github.com/ibryans)
+[![perfil de notshwuy](https://github.com/notshwuy.png?size=60)](https://github.com/notshwuy)
 
 ## Licença
 
