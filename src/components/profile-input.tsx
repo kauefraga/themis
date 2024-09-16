@@ -30,7 +30,7 @@ export function ProfileInput() {
         className="rounded-lg bg-[#f7f7f7] text-base px-5 h-10"
       />
       <button
-        className="bg-bsky-blue w-10 h-10 rounded-lg flex items-center justify-center"
+        className="bg-bsky-blue/90 hover:bg-bsky-blue transition-colors w-10 h-10 rounded-lg flex items-center justify-center"
         aria-label="Procurar seu perfil"
       >
         <Search className="text-white w-5 h-5" />
