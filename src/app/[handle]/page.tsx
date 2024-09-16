@@ -44,7 +44,7 @@ export default async function ProfileAnalysis({ params }: Props) {
 
           <Link
             href="/"
-            className="flex items-center gap-2 text-[#434343] w-fit px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-[#434343] w-fit px-4 py-2 rounded hover:bg-bsky-blue hover:text-white transition-colors"
           >
             <Undo2 />
             <p>Voltar</p>

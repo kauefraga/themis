@@ -27,7 +27,7 @@ export function ProfileInput() {
         required
         onChange={(event) => setBlueskyHandle(event.target.value)}
         value={blueskyHandle}
-        className="rounded-lg bg-[#f7f7f7] text-[#8a8a8a] text-base px-5 h-10"
+        className="rounded-lg bg-[#f7f7f7] text-base px-5 h-10"
       />
       <button
         className="bg-bsky-blue w-10 h-10 rounded-lg flex items-center justify-center"

@@ -7,7 +7,7 @@ export default function Home() {
         <div className="space-y-3">
           <h1 className="text-xl font-medium">
             Melhore o seu perfil do{' '}
-            <span className="text-blue-600">Bluesky</span> com a análise do
+            <span className="text-bsky-blue">Bluesky</span> com a análise do
             Themis
           </h1>
           <p>
