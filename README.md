@@ -8,7 +8,7 @@
 
 <div align="center">
 
-![Demonstração do uso do Themis](docs/demo.gif)
+![Demonstração do uso do Themis](docs/demo-2.gif)
 
 </div>
 
