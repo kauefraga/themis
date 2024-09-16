@@ -34,7 +34,7 @@ export function generateFeedback(profile: ProfileViewDetailed): string[] {
   addFeedback(
     !!profile.description &&
       profile.description.length >= 20 &&
-      profile.description.length <= 50,
+      profile.description.length <= 200,
     'Ótima descrição, é informativa e direta.',
   );
   addFeedback(
@@ -42,7 +42,7 @@ export function generateFeedback(profile: ProfileViewDetailed): string[] {
     'Sua descrição poderia ser mais informativa.',
   );
   addFeedback(
-    !!profile.description && profile.description.length > 50,
+    !!profile.description && profile.description.length > 200,
     'Sua descrição é um pouco longa. Tente encurtá-la.',
   );
 
