@@ -1,6 +1,6 @@
 'use client';
 
-import { AtSign, MoveRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { FormEvent, useState } from 'react';
 
@@ -19,27 +19,22 @@ export function ProfileInput() {
   };
 
   return (
-    <form className="flex flex-col gap-2" onSubmit={handleForm}>
-      <div className="flex items-center gap-1 rounded-sm">
-        <div className="flex items-center gap-2 rounded-bl rounded-tl bg-zinc-200 p-3">
-          <AtSign className="text-blue-600" />
-          <input
-            type="text"
-            className="bg-zinc-200 outline-none"
-            placeholder="meunick.bsky.social"
-            onChange={(event) => setBlueskyHandle(event.target.value)}
-            value={blueskyHandle}
-            autoCapitalize="none"
-            required
-          />
-        </div>
-        <button
-          className="rounded-br rounded-tr bg-blue-600 p-3 text-white hover:bg-blue-700 transition-colors"
-          aria-label="Analise"
-        >
-          <MoveRight />
-        </button>
-      </div>
+    <form className="flex gap-2" onSubmit={handleForm}>
+      <input
+        type="text"
+        placeholder="meunick.bsky.social"
+        autoCapitalize="none"
+        required
+        onChange={(event) => setBlueskyHandle(event.target.value)}
+        value={blueskyHandle}
+        className="rounded-lg bg-[#f7f7f7] text-[#8a8a8a] text-base px-5 h-10"
+      />
+      <button
+        className="bg-bsky-blue w-10 h-10 rounded-lg flex items-center justify-center"
+        aria-label="Procurar seu perfil"
+      >
+        <Search className="text-white w-5 h-5" />
+      </button>
     </form>
   );
 }
