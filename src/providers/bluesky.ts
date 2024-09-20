@@ -15,3 +15,20 @@ export async function getProfile(actor: string) {
       : 'Um erro inesperado aconteceu';
   }
 }
+
+export async function getAutoComplete(actor: string) {
+  if (actor.trim() != '') {
+    try {
+      const { data } = await agent.searchActorsTypeahead({
+        q: actor,
+      });
+      return data;
+    } catch (error) {
+      return error instanceof Error
+        ? error.message
+        : 'Um erro inesperado aconteceu';
+    }
+  }
+
+  return [];
+}
