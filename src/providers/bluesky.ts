@@ -17,18 +17,19 @@ export async function getProfile(actor: string) {
 }
 
 export async function getAutoComplete(actor: string) {
-  if (actor.trim() != '') {
-    try {
-      const { data } = await agent.searchActorsTypeahead({
-        q: actor,
-      });
-      return data;
-    } catch (error) {
-      return error instanceof Error
-        ? error.message
-        : 'Um erro inesperado aconteceu';
-    }
+  if (actor.trim() === '') {
+    return [];
   }
 
-  return [];
+  try {
+    const { data } = await agent.searchActorsTypeahead({
+      q: actor,
+    });
+
+    return data.actors;
+  } catch (error) {
+    return error instanceof Error
+      ? error.message
+      : 'Um erro inesperado aconteceu';
+  }
 }
