@@ -75,14 +75,15 @@ Fique à vontade para contribuir [abrindo uma issue](https://github.com/kauefrag
 
 Meus agradecimentos a essas pessoas incríveis por ajudarem a aprimorar o projeto ou por incentivarem a continuação do projeto por meio de doações:
 
-[![perfil de gxolivei](https://github.com/gxolivei.png?size=60)](https://github.com/gxolivei)
-[![perfil de rdenadai](https://github.com/rdenadai.png?size=60)](https://github.com/rdenadai)
-[![perfil de andressansantos](https://github.com/andressansantos.png?size=60)](https://github.com/andressansantos)
-[![perfil de jeffque](https://github.com/jeffque.png?size=60)](https://github.com/jeffque)
-[![perfil de caiohvectora](https://github.com/CaioHVectorA.png?size=60)](https://github.com/CaioHVectorA)
-[![perfil de ibryans](https://github.com/ibryans.png?size=60)](https://github.com/ibryans)
-[![perfil de notshwuy](https://github.com/notshwuy.png?size=60)](https://github.com/notshwuy)
-[![perfil de jotavetech](https://github.com/jotavetech.png?size=60)](https://github.com/jotavetech)
+<a href="https://github.com/gxolivei"><img width="60" src="https://github.com/gxolivei.png" alt="perfil de gxolivei" /></a>
+<a href="https://github.com/rdenadai"><img width="60" src="https://github.com/rdenadai.png" alt="perfil de rdenadai" /></a>
+<a href="https://github.com/andressansantos"><img width="60" src="https://github.com/andressansantos.png" alt="perfil de andressansantos" /></a>
+<a href="https://github.com/jeffque"><img width="60" src="https://github.com/jeffque.png" alt="perfil de jeffque" /></a>
+<a href="https://github.com/caiohvectora"><img width="60" src="https://github.com/caiohvectora.png" alt="perfil de caiohvectora" /></a>
+<a href="https://github.com/ibryans"><img width="60" src="https://github.com/ibryans.png" alt="perfil de ibryans" /></a>
+<a href="https://github.com/notshwuy"><img width="60" src="https://github.com/notshwuy.png" alt="perfil de notshwuy" /></a>
+<a href="https://github.com/jotavetech"><img width="60" src="https://github.com/jotavetech.png" alt="perfil de jotavetech" /></a>
+<a href="https://github.com/2D-nz"><img width="60" src="https://github.com/2D-nz.png" alt="perfil de 2D-nz" /></a>
 
 ## Licença
 
