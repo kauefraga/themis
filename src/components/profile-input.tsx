@@ -37,7 +37,7 @@ export function ProfileInput() {
   };
 
   return (
-    <form className="grid " onSubmit={handleForm}>
+    <form className="grid" onSubmit={handleForm}>
       <div className="flex gap-2">
         <input
           type="text"
@@ -46,7 +46,7 @@ export function ProfileInput() {
           required
           onChange={(event) => handleInput(event.target.value)}
           value={blueskyHandle}
-          className="rounded-lg bg-[#f7f7f7] text-base px-5 h-10"
+          className="rounded-lg bg-[#f7f7f7] border text-base px-5 h-10"
         />
         <button
           className="bg-bsky-blue/90 hover:bg-bsky-blue transition-colors w-10 h-10 rounded-lg flex items-center justify-center"
@@ -57,7 +57,7 @@ export function ProfileInput() {
       </div>
       <div
         id="hidden-scrollbar"
-        className="mt-2 overflow-y-scroll h-[500px] w-[255px] rounded-lg"
+        className="mt-2 overflow-y-scroll h-80 w-[255px] rounded-lg"
       >
         {users &&
           users.map((user) => {
