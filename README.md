@@ -91,4 +91,4 @@ Este projeto está sob a licença MIT - Veja a [LICENÇA](LICENSE) para mais inf
 
 ---
 
-Se você gostou do projeto, considere dar uma estrela no repositório ⭐, fazer [uma doação para eu tomar um cafézinho](https://www.pixme.bio/kauefraga) ☕ ou publicar a análise do seu perfil no [Bluesky](https://bsky.app/) 💙
+Se você gostou do projeto, considere dar uma estrela no repositório ⭐, fazer [uma doação para eu tomar um cafézinho](https://pixmeacoffee.vercel.app/kauefraga) ☕ ou publicar a análise do seu perfil no [Bluesky](https://bsky.app/) 💙
